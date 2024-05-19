@@ -66,7 +66,7 @@ class CsvPlotterApp(QMainWindow):
         layout.addWidget(self.exportFolderBtn)
 
         # 确定按钮
-        self.plotBtn = QPushButton('确定', self)
+        self.plotBtn = QPushButton('Confirm 确定', self)
         self.plotBtn.setStyleSheet("""
             QPushButton {
                 border-radius: 10px;

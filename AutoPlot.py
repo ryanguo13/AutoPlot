@@ -72,7 +72,7 @@ def plotter(file_name, export_path):
     slope, intercept = coefficients
     corrected_moment = mm_groups_1 - (slope * mf_groups_1)
     plt.scatter(mf_groups_1, mm_groups_1, label='OG', s=2)
-    plt.plot(mf_groups_1, corrected_moment, color='blue', label='linear fit')
+    plt.plot(mf_groups_1, corrected_moment, color='black', label='Fittd')
     plt.xlabel('Magnetic Field')
     plt.ylabel('Moment')
     plt.legend()
@@ -90,8 +90,8 @@ def plotter(file_name, export_path):
         coefficients = np.polyfit(mf_groups_i[min_indices], mm_groups_i[min_indices], 1)
         slope, intercept = coefficients
         corrected_moment = mm_groups_i - (slope * mf_groups_i)
-        plt.scatter(mf_groups_i, mm_groups_i, label=f'Group {i + 1} Original', s=2)
-        plt.plot(mf_groups_i, corrected_moment, color='blue', label='Linear Fit')
+        plt.scatter(mf_groups_i, mm_groups_i, label='Original', s=2)
+        plt.plot(mf_groups_i, corrected_moment, color='black', label='Fitted')
         plt.xlabel('Magnetic Field')
         plt.ylabel('Corrected Moment')
         plt.title(f'{tmp_idx}K')
